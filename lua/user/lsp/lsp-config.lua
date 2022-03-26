@@ -1,5 +1,4 @@
 local lspconfig = require("lspconfig")
-local null_ls = require("null-ls")
 
 local buf_map = function(bufnr, mode, lhs, rhs, opts)
     vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts or {
@@ -36,37 +35,3 @@ local on_attach = function(client, bufnr)
     end
 end
 
--- lspconfig.tsserver.setup({
---     on_attach = function(client, bufnr)
---         client.resolved_capabilities.document_formatting = false
---         client.resolved_capabilities.document_range_formatting = false
---
---         local ts_utils = require("nvim-lsp-ts-utils")
---         ts_utils.setup({})
---         ts_utils.setup_client(client)
---
---         buf_map(bufnr, "n", "gs", ":TSLspOrganize<CR>")
---         buf_map(bufnr, "n", "gi", ":TSLspRenameFile<CR>")
---         buf_map(bufnr, "n", "go", ":TSLspImportAll<CR>")
---
---         on_attach(client, bufnr)
---     end,
--- })
-
-local formatting = null_ls.builtins.formatting
-local diagnostics = null_ls.builtins.diagnostics
-
-null_ls.setup({
-	debug = false,
-    sources = {
-        -- null_ls.builtins.diagnostics.eslint,
-        -- null_ls.builtins.code_actions.eslint,
-        -- null_ls.builtins.formatting.prettier,
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-      diagnostics.eslint
-		-- formatting.black.with({ extra_args = { "--fast" } }),
-		-- formatting.stylua,
-  --     diagnostics.flake8
-    },
-    on_attach = on_attach
-})

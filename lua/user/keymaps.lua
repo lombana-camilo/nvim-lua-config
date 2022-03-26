@@ -45,20 +45,20 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<C-k>", "<Esc>:m .-2<CR>==", opts)
-keymap("n", "<C-j>", "<Esc>:m .+1<CR>==", opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Insert --
--- Press jk fast to enter
+-- Press control-space fast to enter
 keymap("i", "<C-Space>", "<ESC>", opts)
 
 -- Visual --
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 -- Move text up and down
-keymap("v", "<C-k>", ":m .-2<CR>==", opts)
-keymap("v", "<C-j>", ":m .+1<CR>==", opts)
 
 --Join the next line
-keymap("v", "J", "mzJ'z", opts)
+-- keymap("n", "J", "mzJ'z", opts)
 
 --Telescope
 keymap ("n","<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)

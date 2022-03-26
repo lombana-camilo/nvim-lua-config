@@ -51,7 +51,6 @@ return packer.startup(function(use)
 
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
-  -- use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
@@ -61,9 +60,10 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
    --Airline
-	use 'bling/vim-airline'
-     use {"vim-airline/vim-airline-themes",
-     airline_theme='gruvbox'}
+   use "nvim-lualine/lualine.nvim"
+	-- use 'bling/vim-airline'
+     -- use {"vim-airline/vim-airline-themes",
+     -- airline_theme='darkplus'}
 
   -- Colorschemes
   use "lunarvim/darkplus.nvim"

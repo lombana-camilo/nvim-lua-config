@@ -109,6 +109,8 @@ use "sonph/onehalf"
   -- use "lewis6991/gitsigns.nvim"
    -- use "kdheepak/lazygit.nvim"
 
+   --Markdown Preview
+   use "iamcco/markdown-preview.nvim"
    --HTML & CSS
    use {
   "mattn/emmet-vim",

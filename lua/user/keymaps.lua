@@ -69,6 +69,9 @@ keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 
 --Format
 keymap("n", "<leader>f", ":Format<cr>", opts)
+
+--Open up MARKDOWN Preview
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)

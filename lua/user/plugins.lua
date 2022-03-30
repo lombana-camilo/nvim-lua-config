@@ -82,7 +82,6 @@ use "sonph/onehalf"
 
    use "L3MON4D3/LuaSnip" --snippet engine
    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-
    --coc
    -- use {'neoclide/coc.nvim', branch = 'release'}
    use "tpope/vim-surround"

@@ -71,6 +71,7 @@ keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>f", ":Format<cr>", opts)
 
 --Open up MARKDOWN Preview
+keymap("n", "<C-m>", ":MarkdownPreview<cr>", opts)
 
 -- Terminal --
 -- Better terminal navigation

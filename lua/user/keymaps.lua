@@ -75,6 +75,10 @@ keymap("n", "<C-m>", ":MarkdownPreview<cr>", opts)
 
 --Express shortcut
 keymap("i", "<C-x>", "<%=%><Left><Left> <Left> ", opts)
+
+--ConsoleLog Live
+keymap("n", "<leader>cl", ":Codi!!<cr>", opts)
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)

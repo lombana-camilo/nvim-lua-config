@@ -107,6 +107,8 @@ use "sonph/onehalf"
   -- Git
   -- use "lewis6991/gitsigns.nvim"
    -- use "kdheepak/lazygit.nvim"
+   --Live Console.Log
+   use "metakirby5/codi.vim"
 
    --Markdown Preview
    use "iamcco/markdown-preview.nvim"

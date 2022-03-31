@@ -73,6 +73,8 @@ keymap("n", "<leader>f", ":Format<cr>", opts)
 --Open up MARKDOWN Preview
 keymap("n", "<C-m>", ":MarkdownPreview<cr>", opts)
 
+--Express shortcut
+keymap("i", "<C-x>", "<%=%><Left><Left> <Left> ", opts)
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)

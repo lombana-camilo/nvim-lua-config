@@ -19,3 +19,5 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.nvim-tree"
+
+-- require "user.dap"

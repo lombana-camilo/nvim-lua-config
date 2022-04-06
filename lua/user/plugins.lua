@@ -105,10 +105,12 @@ use "sonph/onehalf"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
-  -- use "lewis6991/gitsigns.nvim"
-   -- use "kdheepak/lazygit.nvim"
    --Live Console.Log
    use "metakirby5/codi.vim"
+
+   --Debuger
+   -- use "mfussenegger/nvim-dap"
+
 
    --Markdown Preview
    use "iamcco/markdown-preview.nvim"

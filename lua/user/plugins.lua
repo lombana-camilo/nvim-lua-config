@@ -113,7 +113,9 @@ use "sonph/onehalf"
 
 
    --Markdown Preview
-   use "iamcco/markdown-preview.nvim"
+   -- use "iamcco/markdown-preview.nvim"
+   -- use {"iamcco/markdown-preview.nvim", run = 'cd app && yarn install'}
+   use "davidgranstrom/nvim-markdown-preview"
    --HTML & CSS
    use {
   "mattn/emmet-vim",

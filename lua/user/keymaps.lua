@@ -71,7 +71,7 @@ keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>f", ":Format<cr>", opts)
 
 --Open up MARKDOWN Preview
-keymap("n", "<C-m>", ":MarkdownPreview<cr>", opts)
+keymap("n", "<leader>m", ":MarkdownPreview solarized-dark<cr>", opts)
 
 --Express shortcut
 keymap("i", "<C-x>", "<%=%><Left><Left> <Left> ", opts)

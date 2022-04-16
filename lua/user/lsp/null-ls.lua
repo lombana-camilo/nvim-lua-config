@@ -16,6 +16,7 @@ null_ls.setup({
 		-- formatting.stylua,
       -- formatting.json_tool,
     diagnostics.jsonlint,
+    -- diagnostics.eslint,
     -- diagnostics.stylelint,
       -- diagnostics.tidy
 	},

@@ -23,7 +23,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>wq", ":wq<CR>", opts)
-keymap("n", "<leader>qa", ":qa<CR>", opts)
+keymap("n", "<leader>aq", ":qa<CR>", opts)
 
 -- Split navigation
 keymap("n", "<leader>sv", ":vsplit<CR>", opts)

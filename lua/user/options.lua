@@ -1,5 +1,5 @@
 local options = {
-   autochdir = true,
+   autochdir = true,                       -- opens up tree in current file
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   cmdheight = 1,                           -- more space in the neovim command line for displaying messages
@@ -33,7 +33,7 @@ local options = {
   wrap = true,                            -- display lines as one long line
    showbreak = "...",
    -- showbreak = '↳ ',
-  scrolloff = 10,                           -- is one of my fav
+  scrolloff = 12,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
@@ -44,6 +44,6 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+--Former way to write vim options!!
 vim.cmd "set whichwrap+=<,>,[,],h,l"
---vim.cmd [[set iskeyword+=-]] Treat -separated words as one!
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd [[set iskeyword+=-]]                 --Treat  dash separated words as one!

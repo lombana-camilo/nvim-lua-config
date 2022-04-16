@@ -43,7 +43,7 @@ return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons" --Icons for tree
@@ -61,14 +61,11 @@ return packer.startup(function(use)
 
    --Airline
    use "nvim-lualine/lualine.nvim"
-	-- use 'bling/vim-airline'
-     -- use {"vim-airline/vim-airline-themes",
-     -- airline_theme='darkplus'}
 
   -- Colorschemes
   use "lunarvim/darkplus.nvim"
   use "ellisonleao/gruvbox.nvim"
-use "sonph/onehalf"
+  use "sonph/onehalf"
 
   -- cmp plugins
    use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -76,22 +73,21 @@ use "sonph/onehalf"
    use "hrsh7th/cmp-path" -- path completions
    use "hrsh7th/cmp-cmdline" -- cmdline completions
    use "saadparwaiz1/cmp_luasnip" -- snippet completions
- use "hrsh7th/cmp-nvim-lsp"
+   use "hrsh7th/cmp-nvim-lsp" -- lsp completions
+   use "hrsh7th/cmp-nvim-lua" -- lua completions
 
    -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-   use "L3MON4D3/LuaSnip" --snippet engine
-   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-   --coc
-   -- use {'neoclide/coc.nvim', branch = 'release'}
-   use "tpope/vim-surround"
+  use "tpope/vim-surround"
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-   use "jose-elias-alvarez/nvim-lsp-ts-utils"
+  use "jose-elias-alvarez/nvim-lsp-ts-utils"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -101,7 +97,7 @@ use "sonph/onehalf"
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-   use "p00f/nvim-ts-rainbow"
+  use "p00f/nvim-ts-rainbow"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
@@ -113,9 +109,8 @@ use "sonph/onehalf"
 
 
    --Markdown Preview
-   -- use "iamcco/markdown-preview.nvim"
-   -- use {"iamcco/markdown-preview.nvim", run = 'cd app && yarn install'}
-   use "davidgranstrom/nvim-markdown-preview"
+  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+   -- use "davidgranstrom/nvim-markdown-preview"
    --HTML & CSS
    use {
   "mattn/emmet-vim",

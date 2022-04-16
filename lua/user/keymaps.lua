@@ -23,6 +23,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>wq", ":wq<CR>", opts)
+keymap("n", "<leader>qa", ":qa<CR>", opts)
 
 -- Split navigation
 keymap("n", "<leader>sv", ":vsplit<CR>", opts)
@@ -53,12 +54,15 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 keymap("i", "<C-Space>", "<ESC>", opts)
 
 -- Visual --
+-- Move text up and down
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
--- Move text up and down
 
---Join the next line
--- keymap("n", "J", "mzJ'z", opts)
+-- Stay in Visual mode when identing multiple lines
+keymap("v", "<","<gv", opts)
+keymap("v", ">",">gv", opts)
+-- Keep last copied item when pasting
+keymap("v","p",'"_dp',opts)
 
 --Telescope
 keymap ("n","<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
@@ -71,7 +75,7 @@ keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>f", ":Format<cr>", opts)
 
 --Open up MARKDOWN Preview
-keymap("n", "<leader>m", ":MarkdownPreview solarized-dark<cr>", opts)
+keymap("n", "<leader>m", ":MarkdownPreview<cr>", opts)
 
 --Express shortcut
 keymap("i", "<C-x>", "<%=%><Left><Left> <Left> ", opts)

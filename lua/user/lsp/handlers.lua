@@ -70,7 +70,6 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-  --vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-b>", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
    vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-n>", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   vim.api.nvim_buf_set_keymap(
@@ -81,6 +80,7 @@ local function lsp_keymaps(bufnr)
     '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>',
     opts
   )
+  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>e", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
@@ -94,10 +94,24 @@ M.on_attach = function(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-require'lspconfig'.cssls.setup {
-  capabilities = capabilities,
-}
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- -- Fix issues at last
+-- local nvim_lsp = require("lspconfig")
+-- local servers = {
+--   "html",
+--   "cssls",
+--   "tsserver",
+--    "jsonls"
+-- }
+-- for _, lsp in ipairs(servers) do
+--   nvim_lsp[lsp].setup {
+--     capabilities = capabilities,
+--   }
+-- end
+
+-- require'lspconfig'.jsonls.setup {
+--   capabilities = capabilities,
+-- }
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
   return

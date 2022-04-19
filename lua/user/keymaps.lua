@@ -23,7 +23,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>wq", ":wq<CR>", opts)
-keymap("n", "<leader>aq", ":qa<CR>", opts)
+keymap("n", "<leader>Q", ":qa<CR>", opts)
 
 -- Split navigation
 keymap("n", "<leader>sv", ":vsplit<CR>", opts)
@@ -59,14 +59,14 @@ keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 
 -- Stay in Visual mode when identing multiple lines
-keymap("v", "<","<gv", opts)
-keymap("v", ">",">gv", opts)
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
 -- Keep last copied item when pasting
-keymap("v","p",'"_dp',opts)
+keymap("v", "p", '"_dp', opts)
 
 --Telescope
-keymap ("n","<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
-keymap ("n","<C-g>", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
+keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
+keymap("n", "<C-g>", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
 
 --Tree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)
@@ -89,4 +89,3 @@ keymap("n", "<leader>cl", ":Codi!!<cr>", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-

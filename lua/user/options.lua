@@ -47,3 +47,4 @@ end
 --Former way to write vim options!!
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]                 --Treat  dash separated words as one!
+vim.g.material_style = "darker"

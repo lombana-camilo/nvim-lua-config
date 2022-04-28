@@ -12,6 +12,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier,
+		-- formatting.eslint,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		-- formatting.stylua,
       -- formatting.json_tool,

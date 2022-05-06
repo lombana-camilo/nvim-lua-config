@@ -65,7 +65,9 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "p", '"_dp', opts)
 
 --Telescope
-keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
+-- keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
+keymap("n", "<C-p>", "<cmd>lua require('user.telescope').project_files()<cr>", opts)
+keymap("n", "<leader>b", "<Cmd>lua require('user.telescope').file_explorer()<CR>", opts)
 keymap("n", "<C-g>", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
 
 --Tree

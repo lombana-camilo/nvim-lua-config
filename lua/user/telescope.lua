@@ -104,7 +104,7 @@ M.project_files = function()
    if not ok then require "telescope.builtin".find_files(opts) end
 end
 
-function M.file_explorer()
+M.file_explorer = function()
   require("telescope").extensions.file_browser.file_browser {
     prompt_title = " File Browser",
     path_display = { "smart" },
@@ -112,6 +112,12 @@ function M.file_explorer()
     -- layout_strategy = "horizontal",
     layout_config = { preview_width = 0.65, width = 0.75 },
   }
+end
+
+M.my_grep = function(opts)
+  opts = opts or {}
+  opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+  require'telescope.builtin'.live_grep(opts)
 end
 
 return M

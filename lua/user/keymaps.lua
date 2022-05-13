@@ -49,6 +49,10 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
+--Close Buffers to the right or Left
+keymap("n", "<leader>h", ":BufferLineCloseLeft<CR>", opts)
+keymap("n", "<leader>l", ":BufferLineCloseRight<CR>", opts)
+
 -- Insert --
 -- Press control-space fast to enter
 keymap("i", "<C-Space>", "<ESC>", opts)
@@ -65,10 +69,11 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "p", '"_dp', opts)
 
 --Telescope
--- keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
-keymap("n", "<C-p>", "<cmd>lua require('user.telescope').project_files()<cr>", opts)
+keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
+-- keymap("n", "<C-p>", "<cmd>lua require('user.telescope').project_files()<cr>", opts)
 keymap("n", "<leader>b", "<Cmd>lua require('user.telescope').file_explorer()<CR>", opts)
 keymap("n", "<C-g>", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
+-- keymap("n", "<C-g>", "<cmd>lua require('user.telescope').my_grep()<cr>", opts)
 
 --Tree
 keymap("n", "<leader>n", ":NvimTreeToggle<cr>", opts)

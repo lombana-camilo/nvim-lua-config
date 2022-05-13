@@ -51,6 +51,7 @@ return packer.startup(function(use)
       "kyazdani42/nvim-tree.lua",
       commit = "ce463a5"
    }
+   -- use "kyazdani42/nvim-tree.lua"
    use "akinsho/bufferline.nvim"
    use "moll/vim-bbye"
    use "akinsho/toggleterm.nvim"
@@ -102,6 +103,14 @@ return packer.startup(function(use)
    }
    use "p00f/nvim-ts-rainbow"
    use "JoosepAlviste/nvim-ts-context-commentstring"
+
+   --root directory when using telescope
+   use {
+      "airblade/vim-rooter",
+      setup = function ()
+         vim.g.rooter_patterns = { '.git', '.svn', 'package.json', '!node_modules' }
+      end
+   }
 
    -- Git
    --Live Console.Log
